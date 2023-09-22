@@ -1,27 +1,28 @@
-<?php 
+<?php
 
 namespace Controller;
 
-defined('ROOTPATH') OR exit('Access Denied!');
+defined('ROOTPATH') or exit('Access Denied!');
 
 /**
  * login class
  */
 class Login
 {
-	use MainController;
+    use MainController;
 
-	public function index()
-	{
+    public function index()
+    {
 
-		$data['user'] = new \Model\User;
-		$req = new \Core\Request;
-		if($req->posted())
-		{
-			$data['user']->login($_POST);
-		}
+        $data['title'] = "Login";
 
-		$this->view('login',$data);
-	}
+        $data['user'] = new \Model\User;
+        $req = new \Core\Request;
+        if ($req->posted()) {
+            $data['user']->login($_POST);
+        }
+
+        $this->view('login', $data);
+    }
 
 }

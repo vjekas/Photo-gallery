@@ -8,8 +8,11 @@
         <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/bootstrap.min.css" />
     </head>
     <body>
+
+        <?php $ses = new \Core\Session;?>
+
         <!-- NAV BAR -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?=ROOT?>"><?=APP_NAME?></a>
                 <button
@@ -31,6 +34,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?=ROOT?>/photos">Photos</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?=ROOT?>/upload">Upload Photo</a>
+                        </li>
+
+                        <?php if ($ses->is_logged_in()): ?>
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -39,24 +48,33 @@
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Dropdown
+                              Hi, <?=$ses->user('username')?>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="<?=ROOT?>/profile">Profile</a></li>
+
+                                <?php if ($ses->user('role') == 'admin'): ?>
+                                <li><a class="dropdown-item" href="<?=ROOT?>/admin">Admin</a></li>
+                                <?php endif?>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="<?=ROOT?>/logout">Logout</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?=ROOT?>/login">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?=ROOT?>/signup">Signup</a>
+                            </li>
+                        <?php endif?>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form action="<?ROOT?>/search" method="get" class="d-flex" role="search">
                         <input
                             class="form-control me-2"
                             type="search"
-                            placeholder="Search"
+                            placeholder="Search photos"
                             aria-label="Search"
                         />
                         <button class="btn btn-outline-success" type="submit">Search</button>

@@ -13,8 +13,9 @@ class {CLASSNAME}
 
 	public function index()
 	{
+		$data['title'] = "{CLASSNAME}";
 
-		$this->view('{classname}');
+		$this->view('{classname}', $data);
 	}
 
 }

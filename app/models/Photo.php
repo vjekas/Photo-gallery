@@ -14,13 +14,15 @@ class Photo
 
     protected $table = 'photos';
     protected $primaryKey = 'id';
-    protected $loginUniqueColumn = 'email';
+    protected $loginUniqueColumn = 'id';
 
     protected $allowedColumns = [
 
-        'username',
-        'email',
-        'password',
+        'user_id',
+        'image',
+        'title',
+        'date_created',
+        'date_updated',
     ];
 
     /*****************************
@@ -37,7 +39,15 @@ class Photo
     alpha_symbol
      *
      ****************************/
-    protected $validationRules = [
+    protected $onInsertValidationRules = [
+
+        'title' => [
+            'alpha_numeric_symbol',
+            'required',
+        ],
+    ];
+
+    protected $onUpdateValidationRules = [
 
         'title' => [
             'alpha_numeric_symbol',

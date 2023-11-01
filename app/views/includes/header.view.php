@@ -70,8 +70,11 @@
                             </li>
                         <?php endif?>
                     </ul>
-                    <form action="<?ROOT?>/search" method="get" class="d-flex" role="search">
+                    <form action="<?=ROOT?>/search" method="get" class="d-flex" role="search">
+
                         <input
+                            name="find"
+                            value="<?=$_GET['find'] ?? ''?>"
                             class="form-control me-2"
                             type="search"
                             placeholder="Search photos"

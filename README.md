@@ -42,10 +42,9 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ## Acknowledgements
 
 - [Bootstrap](https://getbootstrap.com/) - Used for front-end design and responsiveness.
-- [jQuery](https://jquery.com/) - JavaScript library used for client-side scripting.
 - [Font Awesome](https://fontawesome.com/) - Icons for the user interface.
 
 ## Support
 
-For any inquiries or support, please contact [vjekoslav.vuckovic@gmail.com](mailto:vjekoslav.vuckovic@gmail.com).
+For any inquiries or support, please contact [vjekoslav.vuckovic@gmail.com](mailto:vjekasDev).
 

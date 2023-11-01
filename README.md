@@ -46,5 +46,5 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Support
 
-For any inquiries or support, please contact [vjekoslav.vuckovic@gmail.com](mailto:vjekasDev).
+For any inquiries or support, please contact [vjekas.dev](mailto:vjekoslav.vuckovic@gmail.com).
 

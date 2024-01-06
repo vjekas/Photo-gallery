@@ -5,10 +5,15 @@
 <div class="row p-4 justify-content-center">
     <?php if (!empty($rows)): ?>
         <?php foreach ($rows as $row): ?>
-            <?php $this->view('includes/photo-card', ['row' => $row, 'image' => $image])?>
+            <?php $this->view('includes/photo-card', ['row' => $row, 'image' => $image, 'like' => $like])?>
         <?php endforeach?>
     <?php else: ?>
         <div class="p-2 text-center">No images found</div>
     <?php endif?>
 </div>
 <?php $this->view('includes/footer', $data);?>
+
+<script>
+    var root = '<?=ROOT?>';
+</script>
+<script src="<?=ROOT?>/assets/js/like.js"></script>

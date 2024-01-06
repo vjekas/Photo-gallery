@@ -3,13 +3,13 @@
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?=get_image($image->getThumbnail('assets/images/blog100.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
+      <img src="<?=get_image($image->getThumbnail('assets/images/banner 8.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
     </div>
     <div class="carousel-item">
-      <img src="<?=get_image($image->getThumbnail('assets/images/blog97.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
+      <img src="<?=get_image($image->getThumbnail('assets/images/banner 4.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
     </div>
     <div class="carousel-item">
-      <img src="<?=get_image($image->getThumbnail('assets/images/blog92.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
+      <img src="<?=get_image($image->getThumbnail('assets/images/banner 3.jpg', 1000, 550))?>" class="d-block w-100" alt="..." style="height:550px;object-fit: cover;">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
